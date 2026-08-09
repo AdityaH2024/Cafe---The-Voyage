@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Ember & Bean | Coffee, Kitchen & Dessert</title>
+<meta name="description" content="Explore the full Ember & Bean menu — specialty coffee, breakfast &amp; brunch, pizza, pasta, burgers, Asian bowls and desserts. Filter by category, diet or search by dish.">
+<link rel="canonical" href="https://www.emberandbean.co/menu.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23241B14'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23F7F1E4' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#241B14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar is-scrolled">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo" aria-label="Ember & Bean home">
+      <span class="mark" aria-hidden="true">E&amp;B</span>
+      <span class="word">Ember &amp; Bean<small>Coffee · Kitchen · Dessert</small></span>
+    </a>
+    <nav class="navbar-links" id="navLinks" aria-label="Primary">
+      <a href="index.html#about">Our Story</a>
+      <a href="menu.html" class="is-active">Menu</a>
+      <a href="index.html#locations">Locations</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#reserve" class="btn btn--primary navbar-cta-mobile">Reserve Table</a>
+    </nav>
+    <div class="navbar-cta">
+      <a href="index.html#reserve" class="btn btn--dark">Reserve Table</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main id="main">
+  <section class="menu-hero">
+    <div class="container">
+      <p class="eyebrow">The Full Spread</p>
+      <h1>Our Menu</h1>
+      <p>Specialty coffee, breakfast &amp; brunch, pizza, pasta, burgers and Asian bowls — filter by category or search for a dish.</p>
+    </div>
+  </section>
+
+  <div class="menu-toolbar">
+    <div class="container menu-toolbar-inner">
+      <div class="menu-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="menuSearch" placeholder="Search dishes…" aria-label="Search the menu">
+      </div>
+      <div class="chips-row" id="menuFilters" role="tablist" aria-label="Menu categories"></div>
+      <div class="chips-row" id="dietFilters" role="tablist" aria-label="Dietary filter"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="menu-meta">
+      <span id="menuCount"></span>
+      <span class="legend">
+        <span><i class="dot veg"></i>Veg</span>
+        <span><i class="dot nonveg"></i>Non-Veg</span>
+      </span>
+    </div>
+
+    <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+
+    <div class="menu-empty" id="menuEmpty">
+      <h3>No dishes found</h3>
+      <p>Try another search or category.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Ember & Bean home">
+          <span class="mark" aria-hidden="true">E&amp;B</span>
+          <span class="word">Ember &amp; Bean</span>
+        </a>
+        <p class="footer-about">A warm, all-day café and kitchen — specialty coffee, a globally-inspired menu and desserts worth lingering over.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#about">Our Story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#reserve">Reserve Table</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#locations">Locations</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919820011223" data-cfg="phoneDisplay">+91 98200 11223</a></li>
+          <li><a href="mailto:hello@emberandbean.co" data-cfg="email">hello@emberandbean.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="js-year">2026</span> <span data-cfg="businessName">Ember &amp; Bean</span>. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="menu-data.js"></script>
+<script src="main.js"></script>
+<script src="menu.js"></script>
+</body>
+</html>
