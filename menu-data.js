@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EMBER & BEAN — Site Configuration & Menu Data
+   BOHO BOHO CAFE — Site Configuration & Menu Data
    ==========================================================================
    This file is the single source of truth for a client rebrand.
    To turn this into a real client site, edit SITE_CONFIG, then replace
@@ -7,23 +7,23 @@
 
    Every menu item has its OWN `image` property. Do not reintroduce a
    CATEGORY_IMAGES-style lookup — that was the main flaw in the source
-   template this was built from, and it causes unrelated dishes (e.g. a
-   rice bowl and a bowl of ramen) to display an identical photo.
+   template this was built from, and it causes unrelated dishes to share
+   an identical photo.
    ========================================================================== */
 
 /* ---------- Global site configuration ---------- */
 const SITE_CONFIG = {
-  businessName: "Ember & Bean",
-  shortName: "E&B",
-  tagline: "Coffee, kitchen & good company",
-  founded: "2018",
-  phone: "+91 98200 11223",
-  phoneDisplay: "+91 98200 11223",
-  email: "hello@emberandbean.co",
-  address: "21 Riverside Road, Kothrud, Pune",
-  addressShort: "Riverside Road, Pune",
-  openingHours: "8:00 AM – 11:00 PM, daily",
-  mapQuery: "Riverside Road, Kothrud, Pune",
+  businessName: "Boho Boho",
+  shortName: "Boho",
+  tagline: "A little boho, a lot of soul.",
+  founded: "",
+  phone: "+91 98603 91777",
+  phoneDisplay: "+91 98603 91777",
+  email: "",
+  address: "398, Row house, 1, S Main Rd, Ashok Chakra Society, Meera Nagar, Koregaon Park, Pune, Maharashtra 411001, India",
+  addressShort: "Koregaon Park, Pune",
+  openingHours: "",
+  mapQuery: "398, Row house, 1, S Main Rd, Ashok Chakra Society, Meera Nagar, Koregaon Park, Pune, Maharashtra 411001, India",
   instagram: "#",
   facebook: "#",
   twitter: "#",
@@ -33,268 +33,212 @@ const SITE_CONFIG = {
 
 /* ---------- Menu categories ---------- */
 const MENU_CATEGORIES = [
-  { key: "all", label: "All" },
-  { key: "coffee", label: "Coffee" },
-  { key: "breakfast", label: "Breakfast & Brunch" },
-  { key: "salads", label: "Salads" },
-  { key: "sandwiches", label: "Sandwiches" },
-  { key: "pizza", label: "Pizza" },
-  { key: "pasta", label: "Pasta" },
-  { key: "burgers", label: "Burgers" },
-  { key: "asian", label: "Asian Bowls" },
-  { key: "desserts", label: "Desserts" },
+  { key: "all",         label: "All" },
+  { key: "coffee",      label: "Coffee & Beverages" },
+  { key: "breakfast",   label: "Breakfast & Brunch" },
+  { key: "salads",      label: "Salads & Healthy Bowls" },
+  { key: "pizza",       label: "Pizza" },
+  { key: "pasta",       label: "Pasta" },
+  { key: "sandwiches",  label: "Sandwiches & Wraps" },
+  { key: "desserts",    label: "Desserts" },
 ];
 
 /* ---------- Menu items ----------
    diet: "veg" | "nonveg" | "both"
    tags: ["popular"] | ["recommended"] | both
    image: a photo of THIS dish specifically — never a category stand-in
+
+   NOTE: This is a sales demo preview. Prices and full ingredient details
+   should be confirmed with the client before launch.
 ------------------------------------------------------------------------- */
 const MENU_ITEMS = [
-  /* Coffee */
+
+  /* ── Coffee & Beverages ── */
   {
-    id: "espresso",
-    name: "Espresso",
+    id: "cold-brew",
+    name: "Cold Brew Coffee",
     category: "coffee",
-    price: "₹140",
-    description: "A concentrated shot pulled fresh to order, rich crema on top.",
+    price: "Menu details to be confirmed.",
+    description: "Slow-steeped cold brew, served over ice — smooth and naturally sweet.",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?auto=format&fit=crop&w=800&q=80",
+    tags: ["popular"],
+    image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "cappuccino",
     name: "Cappuccino",
     category: "coffee",
-    price: "₹190",
-    description: "Espresso, steamed milk and a generous cap of microfoam, hand-poured.",
+    price: "Menu details to be confirmed.",
+    description: "Espresso with steamed milk and a velvety cap of microfoam.",
     diet: "veg",
-    tags: ["popular"],
     image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "cold-brew",
-    name: "House Cold Brew",
+    id: "fresh-juice",
+    name: "Fresh Seasonal Juice",
     category: "coffee",
-    price: "₹210",
-    description: "Steeped for eighteen hours, served over ice with a splash of cream.",
+    price: "Menu details to be confirmed.",
+    description: "Pressed to order from seasonal fruits — ask your server for today's blend.",
     diet: "veg",
-    tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* Breakfast & Brunch */
-  {
-    id: "farmhouse-eggs",
-    name: "Farmhouse Eggs",
-    category: "breakfast",
-    price: "₹280",
-    description: "Two eggs your way, sourdough toast, roasted tomato and herb butter.",
-    diet: "veg",
-    image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80",
-  },
+  /* ── Breakfast & Brunch ── */
   {
     id: "avocado-toast",
-    name: "Avocado & Chilli Toast",
+    name: "Avocado Toast",
     category: "breakfast",
-    price: "₹310",
-    description: "Smashed avocado, chilli flakes, feta and a poached egg on grain toast.",
+    price: "Menu details to be confirmed.",
+    description: "Smashed avocado on sourdough with chilli flakes and a soft-poached egg.",
     diet: "veg",
     tags: ["popular"],
     image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "belgian-waffle",
-    name: "Belgian Waffle",
+    id: "eggs-benedict",
+    name: "Eggs Benedict",
     category: "breakfast",
-    price: "₹300",
-    description: "Warm and crisp, finished with maple syrup and seasonal fruit.",
+    price: "Menu details to be confirmed.",
+    description: "Poached eggs on an English muffin with hollandaise and your choice of topping.",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1562376552-0d160dcb1a3d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "blueberry-pancakes",
-    name: "Blueberry Pancakes",
+    id: "pancakes",
+    name: "Fluffy Buttermilk Pancakes",
     category: "breakfast",
-    price: "₹320",
-    description: "Buttermilk pancakes stacked high with blueberries and warm syrup.",
+    price: "Menu details to be confirmed.",
+    description: "Stacked high with seasonal compote, whipped cream and maple syrup.",
     diet: "veg",
     tags: ["recommended"],
     image: "https://images.unsplash.com/photo-1650134973809-d8c3a2da59ba?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* Salads */
+  /* ── Salads & Healthy Bowls ── */
   {
-    id: "greek-garden-salad",
+    id: "falafel-hummus",
+    name: "Falafel with Hummus",
+    category: "salads",
+    price: "Menu details to be confirmed.",
+    description: "Crispy falafel served over creamy hummus with fresh pita, olives and herbs.",
+    diet: "veg",
+    tags: ["popular"],
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "greek-salad",
     name: "Greek Garden Salad",
     category: "salads",
-    price: "₹260",
-    description: "Cucumber, tomato, olives and feta tossed in oregano vinaigrette.",
+    price: "Menu details to be confirmed.",
+    description: "Cucumber, tomato, Kalamata olives and feta in a light oregano dressing.",
     diet: "veg",
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "roast-pumpkin-salad",
-    name: "Roasted Pumpkin & Feta Salad",
+    id: "quinoa-bowl",
+    name: "Quinoa Power Bowl",
     category: "salads",
-    price: "₹290",
-    description: "Roasted pumpkin, rocket, toasted seeds and whipped feta.",
+    price: "Menu details to be confirmed.",
+    description: "Roasted vegetables, chickpeas and avocado over herbed quinoa.",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80&sat=-10",
+    tags: ["recommended"],
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* Sandwiches */
+  /* ── Pizza ── */
   {
-    id: "club-sandwich",
-    name: "Grilled Club Sandwich",
-    category: "sandwiches",
-    price: "₹300",
-    description: "Triple-stacked with grilled chicken, egg, lettuce and smoked mayo.",
-    diet: "nonveg",
-    tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "veg-panini",
-    name: "Herb-Roasted Veg Panini",
-    category: "sandwiches",
-    price: "₹260",
-    description: "Grilled seasonal vegetables and melted cheese on herb focaccia.",
-    diet: "veg",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=80&sat=-15",
-  },
-
-  /* Pizza */
-  {
-    id: "margherita-pizza",
-    name: "Margherita Pizza",
+    id: "exotic-pizza",
+    name: "Exotic Pizza",
     category: "pizza",
-    price: "₹340",
-    description: "Wood-fired, San Marzano tomato, fresh mozzarella and basil.",
+    price: "Menu details to be confirmed.",
+    description: "A chef-selected combination of seasonal toppings on a thin, crispy crust.",
     diet: "veg",
     tags: ["popular"],
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "veg-supreme-pizza",
-    name: "Wood-Fired Veg Supreme",
+    id: "margherita",
+    name: "Margherita Pizza",
     category: "pizza",
-    price: "₹390",
-    description: "Bell pepper, onion, olive, mushroom and mozzarella on a charred crust.",
+    price: "Menu details to be confirmed.",
+    description: "Classic tomato base, fresh mozzarella and fragrant basil on a thin crust.",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80&sat=-10",
+    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* Pasta */
+  /* ── Pasta ── */
   {
-    id: "alfredo-pasta",
-    name: "Creamy Alfredo Pasta",
+    id: "creamy-mushroom-pasta",
+    name: "Creamy Mushroom Pasta",
     category: "pasta",
-    price: "₹350",
-    description: "Fettuccine in a silky parmesan cream sauce with cracked pepper.",
+    price: "Menu details to be confirmed.",
+    description: "Sautéed wild mushrooms in a rich cream sauce tossed with pappardelle and fresh herbs.",
+    diet: "veg",
+    tags: ["popular"],
+    image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "pesto-pasta",
+    name: "Pesto Pasta",
+    category: "pasta",
+    price: "Menu details to be confirmed.",
+    description: "Al dente pasta tossed in fresh basil pesto with sun-dried tomatoes and pine nuts.",
     diet: "veg",
     tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=800&q=80",
   },
+
+  /* ── Sandwiches & Wraps ── */
   {
-    id: "arrabbiata-pasta",
-    name: "Penne Arrabbiata",
-    category: "pasta",
-    price: "₹330",
-    description: "Penne in a fiery tomato and garlic sauce, finished with basil.",
+    id: "grilled-veg-wrap",
+    name: "Grilled Vegetable Wrap",
+    category: "sandwiches",
+    price: "Menu details to be confirmed.",
+    description: "Chargrilled seasonal vegetables, hummus and fresh greens in a soft flour wrap.",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80&sat=-10",
-  },
-
-  /* Burgers */
-  {
-    id: "classic-cheese-burger",
-    name: "Classic Cheese Burger",
-    category: "burgers",
-    price: "₹360",
-    description: "Grilled patty, cheddar, pickles and house sauce on a brioche bun.",
-    diet: "nonveg",
     tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "smoky-bbq-burger",
-    name: "Smoky BBQ Burger",
-    category: "burgers",
-    price: "₹390",
-    description: "Double patty, smoked cheddar, crispy onions and BBQ glaze.",
-    diet: "nonveg",
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80&sat=-10",
-  },
-
-  /* Asian Bowls */
-  {
-    id: "bibimbap",
-    name: "Bibimbap",
-    category: "asian",
-    price: "₹360",
-    description: "Steamed rice with julienned vegetables, gochujang and a fried egg.",
+    id: "club-sandwich",
+    name: "Classic Club Sandwich",
+    category: "sandwiches",
+    price: "Menu details to be confirmed.",
+    description: "Toasted triple-decker with your choice of filling, served with house fries.",
     diet: "both",
-    tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "toppuki",
-    name: "Toppuki Rice Cakes",
-    category: "asian",
-    price: "₹330",
-    description: "Chewy rice cakes tossed in a sweet-spicy gochujang sauce.",
-    diet: "veg",
-    tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1585032226651-759a372437d3?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "shoyu-ramen",
-    name: "Shoyu Ramen",
-    category: "asian",
-    price: "₹380",
-    description: "Soy-based broth, soft egg, scallion and toasted nori.",
-    diet: "nonveg",
-    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "korean-fried-rice-bowl",
-    name: "Korean Fried Rice Bowl",
-    category: "asian",
-    price: "₹340",
-    description: "Kimchi fried rice with sesame, spring onion and a crisp egg.",
-    diet: "veg",
-    image: "https://images.unsplash.com/photo-1583224964978-2257b960c3d3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* Desserts */
+  /* ── Desserts ── */
   {
-    id: "molten-chocolate-cake",
-    name: "Molten Chocolate Cake",
+    id: "brownie",
+    name: "Warm Chocolate Brownie",
     category: "desserts",
-    price: "₹250",
-    description: "Warm chocolate cake with a liquid centre, vanilla ice cream.",
+    price: "Menu details to be confirmed.",
+    description: "Rich dark chocolate brownie served warm with a scoop of vanilla ice cream.",
     diet: "veg",
     tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "chocolate-waffle-sundae",
-    name: "Belgian Chocolate Waffle Sundae",
+    id: "cheesecake",
+    name: "New York Cheesecake",
     category: "desserts",
-    price: "₹280",
-    description: "Warm waffle, chocolate sauce, whipped cream and toasted almonds.",
+    price: "Menu details to be confirmed.",
+    description: "Creamy baked cheesecake on a buttery biscuit base with seasonal berry compote.",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=80",
+    tags: ["recommended"],
+    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
 /* Homepage featured dishes reference IDs from MENU_ITEMS above,
    so the data never has to be duplicated. */
 const FEATURED_DISH_IDS = [
-  "bibimbap",
-  "belgian-waffle",
-  "veg-supreme-pizza",
-  "smoky-bbq-burger",
-  "toppuki",
-  "molten-chocolate-cake",
+  "falafel-hummus",
+  "exotic-pizza",
+  "creamy-mushroom-pasta",
+  "avocado-toast",
+  "cold-brew",
+  "brownie",
 ];

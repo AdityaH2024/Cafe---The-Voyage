@@ -4,6 +4,16 @@
 (function () {
   "use strict";
 
+  /* ---------- Site Loader ---------- */
+  const loader = document.getElementById("site-loader");
+  if (loader) {
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        loader.classList.add("is-hidden");
+      }, 700);
+    });
+  }
+
   /* ---------- Apply SITE_CONFIG to the page ----------
      Elements marked with data-cfg="phone" etc. are populated from
      SITE_CONFIG so a client rebrand only requires editing menu-data.js.
