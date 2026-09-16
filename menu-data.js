@@ -1,29 +1,16 @@
-/* ==========================================================================
-   BOHO BOHO CAFE — Site Configuration & Menu Data
-   ==========================================================================
-   This file is the single source of truth for a client rebrand.
-   To turn this into a real client site, edit SITE_CONFIG, then replace
-   the contents of MENU_ITEMS / MENU_CATEGORIES / FEATURED_DISH_IDS.
-
-   Every menu item has its OWN `image` property. Do not reintroduce a
-   CATEGORY_IMAGES-style lookup — that was the main flaw in the source
-   template this was built from, and it causes unrelated dishes to share
-   an identical photo.
-   ========================================================================== */
-
-/* ---------- Global site configuration ---------- */
 const SITE_CONFIG = {
-  businessName: "Boho Boho",
-  shortName: "Boho",
-  tagline: "A little boho, a lot of soul.",
+  businessName: "Cafe The Voyage",
+  shortName: "The Voyage",
+  tagline: "A Little Voyage, A Lot of Flavor.",
   founded: "",
-  phone: "+91 98603 91777",
-  phoneDisplay: "+91 98603 91777",
+  phone: "+91 85969 50267",
+  phoneDisplay: "+91 85969 50267",
   email: "",
-  address: "398, Row house, 1, S Main Rd, Ashok Chakra Society, Meera Nagar, Koregaon Park, Pune, Maharashtra 411001, India",
+  address:
+    "A-2, Ground Floor, Ashiyana Park, Koregaon Park, North Main Road, Lane 5, Pune, Maharashtra 411001",
   addressShort: "Koregaon Park, Pune",
   openingHours: "",
-  mapQuery: "398, Row house, 1, S Main Rd, Ashok Chakra Society, Meera Nagar, Koregaon Park, Pune, Maharashtra 411001, India",
+  mapQuery: "Cafe The Voyage, A-2, Ashiyana Park, Koregaon Park, Pune",
   instagram: "#",
   facebook: "#",
   twitter: "#",
@@ -31,214 +18,183 @@ const SITE_CONFIG = {
     "Demo reservation form — connect your booking system or CRM to receive real reservations.",
 };
 
-/* ---------- Menu categories ---------- */
 const MENU_CATEGORIES = [
-  { key: "all",         label: "All" },
-  { key: "coffee",      label: "Coffee & Beverages" },
-  { key: "breakfast",   label: "Breakfast & Brunch" },
-  { key: "salads",      label: "Salads & Healthy Bowls" },
-  { key: "pizza",       label: "Pizza" },
-  { key: "pasta",       label: "Pasta" },
-  { key: "sandwiches",  label: "Sandwiches & Wraps" },
-  { key: "desserts",    label: "Desserts" },
+  { key: "all", label: "All" },
+  { key: "breakfast", label: "All Day Breakfast" },
+  { key: "toasties", label: "Open Toasties / Tartines" },
+  { key: "smoothie", label: "Smoothie Bowls" },
+  { key: "panini", label: "Panini Sandwiches" },
+  { key: "burgers", label: "Burgers" },
+  { key: "pasta", label: "Pasta" },
+  { key: "coffee", label: "Coffee & Beverages" },
+  { key: "desserts", label: "Desserts" },
 ];
 
-/* ---------- Menu items ----------
-   diet: "veg" | "nonveg" | "both"
-   tags: ["popular"] | ["recommended"] | both
-   image: a photo of THIS dish specifically — never a category stand-in
-
-   NOTE: This is a sales demo preview. Prices and full ingredient details
-   should be confirmed with the client before launch.
-------------------------------------------------------------------------- */
 const MENU_ITEMS = [
-
-  /* ── Coffee & Beverages ── */
+  /* ── All Day Breakfast ── */
   {
-    id: "cold-brew",
-    name: "Cold Brew Coffee",
-    category: "coffee",
-    price: "Menu details to be confirmed.",
-    description: "Slow-steeped cold brew, served over ice — smooth and naturally sweet.",
+    id: "french-toast",
+    name: "I AM FABULOUS (French Toast with Dates Syrup)",
+    category: "breakfast",
+    price: "₹345",
+    description: "Served with dates Syrup and Cinnamon Dust",
     diet: "veg",
     tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1501959915551-4e8d30928317?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "cappuccino",
-    name: "Cappuccino",
-    category: "coffee",
-    price: "Menu details to be confirmed.",
-    description: "Espresso with steamed milk and a velvety cap of microfoam.",
+    id: "american-pancakes",
+    name: "I AM COMPASSIONATE (Classic American Pancakes)",
+    category: "breakfast",
+    price: "₹345",
+    description: "Served with Maple Syrup and Sugar Dust",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+    tags: ["recommended"],
+    image:
+      "https://images.unsplash.com/photo-1554520735-0a6b8b6ce8b7?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "fresh-juice",
-    name: "Fresh Seasonal Juice",
-    category: "coffee",
-    price: "Menu details to be confirmed.",
-    description: "Pressed to order from seasonal fruits — ask your server for today's blend.",
+    id: "nutella-crepes",
+    name: "I AM NEEDED (Nutella Crepes with Roasted Walnut)",
+    category: "breakfast",
+    price: "₹405",
+    description: "Vanilla Crepes | Nutella | Banana | Roasted Hazelnut chunks",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "pesto-crepes",
+    name: "I AM MAGICAL (Pesto Mushroom Sauteed Spinach Crepes)",
+    category: "breakfast",
+    price: "₹405",
+    description:
+      "Inhouse Pesto | Sauteed herbs Mushroom | Feta Cheese served with inhouse salad and dips",
+    diet: "veg",
+    image:
+      "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* ── Breakfast & Brunch ── */
+  /* ── Open Toasties / Tartines ── */
   {
     id: "avocado-toast",
-    name: "Avocado Toast",
-    category: "breakfast",
-    price: "Menu details to be confirmed.",
-    description: "Smashed avocado on sourdough with chilli flakes and a soft-poached egg.",
+    name: "I AM APPRECIATED (Avocado Guacamole on Toast)",
+    category: "toasties",
+    price: "₹655",
+    description:
+      "Toast | Crushed Avocado | Onion | Tomato | Cilantro | Olive oil feta on top served with Inhouse Salad & Dips",
     diet: "veg",
-    tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "eggs-benedict",
-    name: "Eggs Benedict",
-    category: "breakfast",
-    price: "Menu details to be confirmed.",
-    description: "Poached eggs on an English muffin with hollandaise and your choice of topping.",
-    diet: "veg",
-    image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "pancakes",
-    name: "Fluffy Buttermilk Pancakes",
-    category: "breakfast",
-    price: "Menu details to be confirmed.",
-    description: "Stacked high with seasonal compote, whipped cream and maple syrup.",
-    diet: "veg",
-    tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1650134973809-d8c3a2da59ba?auto=format&fit=crop&w=800&q=80",
+    id: "salmon-toast",
+    name: "I AM SECURE (Smoked Salmon Cream Cheese on Toast)",
+    category: "toasties",
+    price: "₹785",
+    description:
+      "Toast | Spread with Cream Cheese | Lettuce | Smoked Salmon dill leaves on top served with inhouse Salad & Dips",
+    diet: "nonveg",
+    image:
+      "https://images.unsplash.com/photo-1593504049359-715560bb9bf4?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* ── Salads & Healthy Bowls ── */
+  /* ── Smoothie Bowls ── */
   {
-    id: "falafel-hummus",
-    name: "Falafel with Hummus",
-    category: "salads",
-    price: "Menu details to be confirmed.",
-    description: "Crispy falafel served over creamy hummus with fresh pita, olives and herbs.",
+    id: "berry-bowl",
+    name: "I AM BRAVE (Berry Nutty Bowl)",
+    category: "smoothie",
+    price: "₹465",
+    description: "Mix Berries | Banana | Yogurt | Fresh fruits and nuts",
     diet: "veg",
-    tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "greek-salad",
-    name: "Greek Garden Salad",
-    category: "salads",
-    price: "Menu details to be confirmed.",
-    description: "Cucumber, tomato, Kalamata olives and feta in a light oregano dressing.",
-    diet: "veg",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "quinoa-bowl",
-    name: "Quinoa Power Bowl",
-    category: "salads",
-    price: "Menu details to be confirmed.",
-    description: "Roasted vegetables, chickpeas and avocado over herbed quinoa.",
-    diet: "veg",
-    tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* ── Pizza ── */
+  /* ── Panini Sandwiches ── */
   {
-    id: "exotic-pizza",
-    name: "Exotic Pizza",
-    category: "pizza",
-    price: "Menu details to be confirmed.",
-    description: "A chef-selected combination of seasonal toppings on a thin, crispy crust.",
-    diet: "veg",
+    id: "banh-mi",
+    name: "I AM VERSATILE (The Voyage Banh Mi)",
+    category: "panini",
+    price: "₹505",
+    description:
+      "Spicy minced chicken patty | Carrot | Cucumber | Tomato | Mint | Coriander sauce served with salad & Fries",
+    diet: "nonveg",
     tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "margherita",
-    name: "Margherita Pizza",
-    category: "pizza",
-    price: "Menu details to be confirmed.",
-    description: "Classic tomato base, fresh mozzarella and fragrant basil on a thin crust.",
+    id: "peri-peri-chicken",
+    name: "I AM GRACEFUL (Peri Peri Chicken)",
+    category: "panini",
+    price: "₹535",
+    description:
+      "Chicken tossed with Peri Peri Sauce | Cucumber | Tomato | Bellpepper served with Salad & Fries",
+    diet: "nonveg",
+    tags: ["recommended"],
+    image:
+      "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80",
+  },
+
+  /* ── Burgers ── */
+  {
+    id: "veg-burger",
+    name: "I AM INNOVATIVE (Crunchy Veg and Cheese Burger)",
+    category: "burgers",
+    price: "₹405",
+    description:
+      "Inhouse Mix Veg patty | Cheese | Tomato | Onion | Lettuce served with fries",
     diet: "veg",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80",
   },
 
   /* ── Pasta ── */
   {
-    id: "creamy-mushroom-pasta",
-    name: "Creamy Mushroom Pasta",
+    id: "pink-sauce-pasta",
+    name: "Pink Sauce Pasta",
     category: "pasta",
-    price: "Menu details to be confirmed.",
-    description: "Sautéed wild mushrooms in a rich cream sauce tossed with pappardelle and fresh herbs.",
+    price: "View full menu",
+    description: "Delicious pasta tossed in a creamy pink sauce with herbs.",
     diet: "veg",
     tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "pesto-pasta",
-    name: "Pesto Pasta",
-    category: "pasta",
-    price: "Menu details to be confirmed.",
-    description: "Al dente pasta tossed in fresh basil pesto with sun-dried tomatoes and pine nuts.",
-    diet: "veg",
-    tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80",
   },
 
-  /* ── Sandwiches & Wraps ── */
+  /* ── Coffee & Beverages ── */
   {
-    id: "grilled-veg-wrap",
-    name: "Grilled Vegetable Wrap",
-    category: "sandwiches",
-    price: "Menu details to be confirmed.",
-    description: "Chargrilled seasonal vegetables, hummus and fresh greens in a soft flour wrap.",
+    id: "cappuccino",
+    name: "Cappuccino",
+    category: "coffee",
+    price: "View full menu",
+    description: "Espresso with steamed milk and a velvety cap of microfoam.",
     diet: "veg",
-    tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "club-sandwich",
-    name: "Classic Club Sandwich",
-    category: "sandwiches",
-    price: "Menu details to be confirmed.",
-    description: "Toasted triple-decker with your choice of filling, served with house fries.",
-    diet: "both",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
   },
 
   /* ── Desserts ── */
   {
-    id: "brownie",
-    name: "Warm Chocolate Brownie",
+    id: "blueberry-cheesecake",
+    name: "Blueberry Cheesecake",
     category: "desserts",
-    price: "Menu details to be confirmed.",
-    description: "Rich dark chocolate brownie served warm with a scoop of vanilla ice cream.",
+    price: "View full menu",
+    description: "Classic cheesecake topped with a sweet blueberry compote.",
     diet: "veg",
     tags: ["popular"],
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "cheesecake",
-    name: "New York Cheesecake",
-    category: "desserts",
-    price: "Menu details to be confirmed.",
-    description: "Creamy baked cheesecake on a buttery biscuit base with seasonal berry compote.",
-    diet: "veg",
-    tags: ["recommended"],
-    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
-/* Homepage featured dishes reference IDs from MENU_ITEMS above,
-   so the data never has to be duplicated. */
 const FEATURED_DISH_IDS = [
-  "falafel-hummus",
-  "exotic-pizza",
-  "creamy-mushroom-pasta",
-  "avocado-toast",
-  "cold-brew",
-  "brownie",
+  "french-toast",
+  "nutella-crepes",
+  "banh-mi",
+  "peri-peri-chicken",
+  "pink-sauce-pasta",
+  "blueberry-cheesecake",
 ];

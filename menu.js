@@ -46,7 +46,9 @@
       btn.textContent = d.label;
       btn.addEventListener("click", () => {
         activeDiet = d.key;
-        dietChipsWrap.querySelectorAll(".chip").forEach((el) => el.classList.toggle("is-active", el === btn));
+        dietChipsWrap
+          .querySelectorAll(".chip")
+          .forEach((el) => el.classList.toggle("is-active", el === btn));
         render();
       });
       dietChipsWrap.appendChild(btn);
@@ -68,14 +70,18 @@
   function dietBadge(item) {
     if (!item.diet) return "";
     if (item.diet === "veg") return `<span class="badge-pill veg">Veg</span>`;
-    if (item.diet === "nonveg") return `<span class="badge-pill nonveg">Non-Veg</span>`;
+    if (item.diet === "nonveg")
+      return `<span class="badge-pill nonveg">Non-Veg</span>`;
     return `<span class="badge-pill veg">Veg</span><span class="badge-pill nonveg">Non-Veg</span>`;
   }
 
   function tagBadges(item) {
     if (!item.tags) return "";
     return item.tags
-      .map((t) => `<span class="badge-pill tag-${t}">${t === "popular" ? "Popular" : "Recommended"}</span>`)
+      .map(
+        (t) =>
+          `<span class="badge-pill tag-${t}">${t === "popular" ? "Popular" : "Recommended"}</span>`,
+      )
       .join("");
   }
 
@@ -109,11 +115,12 @@
             </div>
             <p class="dish-desc">${item.description}</p>
           </div>
-        </article>`
+        </article>`,
       )
       .join("");
 
-    countLabel.textContent = filtered.length + (filtered.length === 1 ? " dish" : " dishes");
+    countLabel.textContent =
+      filtered.length + (filtered.length === 1 ? " dish" : " dishes");
     emptyState.style.display = filtered.length ? "none" : "block";
   }
 
@@ -122,7 +129,9 @@
   const requestedCat = params.get("cat");
   if (requestedCat && MENU_CATEGORIES.some((c) => c.key === requestedCat)) {
     activeCat = requestedCat;
-    const targetLabel = MENU_CATEGORIES.find((c) => c.key === requestedCat).label;
+    const targetLabel = MENU_CATEGORIES.find(
+      (c) => c.key === requestedCat,
+    ).label;
     chipsWrap.querySelectorAll(".chip").forEach((el) => {
       const match = el.textContent === targetLabel;
       el.classList.toggle("is-active", match);

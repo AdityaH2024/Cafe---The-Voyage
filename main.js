@@ -37,18 +37,26 @@
   ------------------------------------------------------------------- */
   const featuredWrap = document.getElementById("featuredDishes");
 
-  if (featuredWrap && typeof MENU_ITEMS !== "undefined" && typeof FEATURED_DISH_IDS !== "undefined") {
+  if (
+    featuredWrap &&
+    typeof MENU_ITEMS !== "undefined" &&
+    typeof FEATURED_DISH_IDS !== "undefined"
+  ) {
     const byId = Object.fromEntries(MENU_ITEMS.map((i) => [i.id, i]));
 
     const dietBadge = (item) => {
       if (!item.diet) return "";
       if (item.diet === "veg") return `<span class="badge-pill veg">Veg</span>`;
-      if (item.diet === "nonveg") return `<span class="badge-pill nonveg">Non-Veg</span>`;
+      if (item.diet === "nonveg")
+        return `<span class="badge-pill nonveg">Non-Veg</span>`;
       return `<span class="badge-pill veg">Veg</span><span class="badge-pill nonveg">Non-Veg</span>`;
     };
     const tagBadges = (item) =>
       (item.tags || [])
-        .map((t) => `<span class="badge-pill tag-${t}">${t === "popular" ? "Popular" : "Recommended"}</span>`)
+        .map(
+          (t) =>
+            `<span class="badge-pill tag-${t}">${t === "popular" ? "Popular" : "Recommended"}</span>`,
+        )
         .join("");
 
     featuredWrap.innerHTML = FEATURED_DISH_IDS.map((id) => {
@@ -79,7 +87,7 @@
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     freshReveals.forEach((el) => freshObs.observe(el));
   }
@@ -146,11 +154,14 @@
           if (!entry.isIntersecting) return;
           const id = entry.target.getAttribute("id");
           navAnchors.forEach((a) => {
-            a.classList.toggle("is-active", a.getAttribute("href").endsWith("#" + id));
+            a.classList.toggle(
+              "is-active",
+              a.getAttribute("href").endsWith("#" + id),
+            );
           });
         });
       },
-      { rootMargin: "-45% 0px -50% 0px" }
+      { rootMargin: "-45% 0px -50% 0px" },
     );
     sections.forEach((s) => obs.observe(s));
   }
@@ -167,7 +178,7 @@
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     revealEls.forEach((el) => revealObs.observe(el));
   }
@@ -195,7 +206,9 @@
       img.closest(".gallery-item").addEventListener("click", () => openAt(i));
     });
 
-    closeBtn?.addEventListener("click", () => lightbox.classList.remove("is-open"));
+    closeBtn?.addEventListener("click", () =>
+      lightbox.classList.remove("is-open"),
+    );
     prevBtn?.addEventListener("click", () => openAt(idx - 1));
     nextBtn?.addEventListener("click", () => openAt(idx + 1));
 
@@ -273,7 +286,10 @@
       const data = Object.fromEntries(new FormData(reserveForm).entries());
 
       if (!RESERVE_ENDPOINT) {
-        console.log("Reservation request (demo — no backend configured):", data);
+        console.log(
+          "Reservation request (demo — no backend configured):",
+          data,
+        );
         msg.textContent =
           "This is a demo form, so nothing was actually booked. Connect a booking system to accept real reservations.";
         msg.classList.remove("error");
@@ -298,7 +314,8 @@
         msg.classList.add("success");
         reserveForm.reset();
       } catch (err) {
-        msg.textContent = "Something went wrong. Please call us to reserve directly.";
+        msg.textContent =
+          "Something went wrong. Please call us to reserve directly.";
         msg.classList.remove("success");
         msg.classList.add("error");
       }
